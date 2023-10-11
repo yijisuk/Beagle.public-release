@@ -4,7 +4,10 @@ import plotly.graph_objects as go
 from .formatters.financials_eval_formatter import FinancialsEvaluationFormatter
 from .formatters.technicals_eval_formatter import TechnicalsEvaluationFormatter
 from .tradingview.technicals import technicals
-from .utils.constants import KeyValues as kv
+from .utils.constants import (
+    KeyValues as kv,
+    EvaluationCriterionDescriptions as ecd
+)
 from common_utils.visualization.gauge import gauge
 
 
@@ -53,43 +56,50 @@ class TickerEvaluator:
         # Liquidity Ratio Evaluation
         self.base_eval_formatting(
             result = financials_formatter.liquidity_evaluation(),
-            subheader_title = "Liquidity"
+            subheader_title = "Liquidity",
+            subheader_description = ecd.LIQUIDITY.value
         )
 
         # Turnover Ratio Evaluation
         self.base_eval_formatting(
             result = financials_formatter.turnover_evaluation(),
-            subheader_title = "Operation Efficiency"
+            subheader_title = "Operation Efficiency",
+            subheader_description = ecd.OPERATION_EFFICIENCY.value
         )
 
         # Profitability Ratio Evaluation
         self.base_eval_formatting(
             result = financials_formatter.profitability_evaluation(),
-            subheader_title = "Profitability"
+            subheader_title = "Profitability",
+            subheader_description = ecd.PROFITABILITY.value
         )
 
         # Business Risk Ratio Evaluation
         self.base_eval_formatting(
             result = financials_formatter.business_risk_evaluation(),
-            subheader_title = "Business Stability"
+            subheader_title = "Business Stability",
+            subheader_description = ecd.BUSINESS_STABILITY.value
         )
 
         # Financial Risk Ratio Evaluation
         self.base_eval_formatting(
             result = financials_formatter.financial_risk_evaluation(),
-            subheader_title = "Financial Stability"
+            subheader_title = "Financial Stability",
+            subheader_description = ecd.FINANCIAL_STABILITY.value
         )
 
         # Stability Ratio Evaluation
         self.base_eval_formatting(
             result = financials_formatter.stability_evaluation(),
-            subheader_title = "Overall Stability"
+            subheader_title = "Overall Stability",
+            subheader_description = ecd.OVERALL_STABILITY.value
         )
 
         # Valuation Ratio Evaluation
         self.base_eval_formatting(
             result = financials_formatter.valuation_evaluation(),
-            subheader_title = "Valuation"
+            subheader_title = "Valuation",
+            subheader_description = ecd.VALUATION.value
         )
         
         # Detailed evaluation
@@ -200,7 +210,7 @@ class TickerEvaluator:
             return None
         
 
-    def base_eval_formatting(self, result, subheader_title):
+    def base_eval_formatting(self, result, subheader_title, subheader_description):
 
         key = subheader_title.lower().replace(" ", "_")
 
@@ -208,6 +218,7 @@ class TickerEvaluator:
             ratio_eval, ratio_score = result
 
             st.subheader(f"{subheader_title}: {ratio_score} out of 5")
+            st.caption(subheader_description)
             st.write(ratio_eval)
 
             self.evaluation_score[key] = ratio_score

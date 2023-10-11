@@ -29,3 +29,14 @@ class FinancialsSectionTitles(Enum):
     FINANCIAL_RISK_RATIO_EVAL = "financial risk ratio evaluation data"
     STABILITY_RATIO_EVAL = "stability ratio evaluation data"
     VALUATION_RATIO_EVAL = "valuation ratio evaluation data"
+
+
+class EvaluationCriterionDescriptions(Enum):
+
+    LIQUIDITY = "A measure of a company's ability to pay its short-term debts and meet financial obligations."
+    OPERATION_EFFICIENCY = "Shows how efficiently a company uses its resources."
+    PROFITABILITY = "Company's profitability based on its business efficiency."
+    BUSINESS_STABILITY = "Evaluates how the company's earnings react to fixed costs and debt."
+    FINANCIAL_STABILITY = "Evaluates the company's debt level and its ability to repay."
+    OVERALL_STABILITY = "Checks the company's stability in the long run."
+    VALUATION = "Determines whether the company is overvalued or undervalued."

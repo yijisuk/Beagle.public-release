@@ -11,6 +11,9 @@ class DatasetLoader():
         self.economy_eval_data = self.load_economy_eval_data()
 
         self.tickers = self.ticker_data["ticker"].tolist()
+        self.company_names = self.ticker_data["company_name"].tolist()
+
+        self.company_dict = dict(zip(self.tickers, self.company_names))
 
 
     def load_organized_ticker_data(self):
