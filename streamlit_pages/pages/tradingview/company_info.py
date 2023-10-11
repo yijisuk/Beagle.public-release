@@ -4,7 +4,7 @@ import streamlit.components.v1 as components
 
 class CompanyInfo:
 
-    def __init__(self, exchange, ticker, theme):
+    def __init__(self, exchange, ticker):
 
         self.exchange = exchange
         self.ticker = ticker

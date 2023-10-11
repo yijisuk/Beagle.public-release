@@ -78,7 +78,7 @@ class StockEvalPage(BasePage):
         with infocol:
 
             if self.ticker is not None and self.exchange is not None:
-                _ = CompanyInfo(exchange=self.exchange, ticker=self.ticker, theme=st.theme().lower())
+                _ = CompanyInfo(exchange=self.exchange, ticker=self.ticker)
 
 
     def intro(self):
