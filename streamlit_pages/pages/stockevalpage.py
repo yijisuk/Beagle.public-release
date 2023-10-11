@@ -25,10 +25,10 @@ class StockEvalPage(BasePage):
     def display_title(self):
 
         self.intro()
-        self.user_input = st.text_input(
-            "", "", 
-            placeholder="Enter ticker or company name", 
-            label_visibility="collapsed"
+
+        self.user_input = st.selectbox(
+            label="Select a company to analyze:",
+            options=self.datasetloader.company_list
         )
 
         _, _, endcol = st.columns(3)
@@ -43,10 +43,12 @@ class StockEvalPage(BasePage):
 
         with evalcol:
             if self.search:
-                if self.user_input != "":
+                if self.user_input is not None:
+
+                    ticker = self.user_input.split(":")[0].strip()
 
                     validator = Validator(
-                        user_input=self.user_input,
+                        user_input=ticker,
                         ticker_data=self.ticker_data
                     )
 
@@ -65,11 +67,11 @@ class StockEvalPage(BasePage):
                             tickerevaluator.ticker_eval()
 
                     elif validation_result["result"] is False:
-                        st.write("Please enter a valid ticker. Refer to the supported tickers above.")
-                        st.write("If you have entered a valid ticker, but the error message is displayed, try again after refreshing the page.")
+                        st.write("Please select one of the provided companies.")
+                        st.write("If a company has been selected, but the error message is displayed, try again after refreshing the page.")
 
-                elif self.user_input == "":
-                    st.write("Please enter a ticker.")
+                elif self.user_input is None:
+                    st.write("Please select one of the provided companies.")
             
 
         with infocol:
@@ -82,7 +84,7 @@ class StockEvalPage(BasePage):
 
         st.title("Beagle 🐶", anchor=False)
         st.header("Evaluate company financials, price technicals, and analysts' forecasts 💡")
-        st.write("Enter a ticker to get started.")
-        st.write("The search engine is a demo deployment, and is currently limited to the following tickers:")
-        st.json(self.datasetloader.company_dict, expanded=False)
+        st.write("Select a company to get started.")
+        st.write("The search engine is a demo deployment, and the supported tickers are limited.")
+        st.write("Processing the evaluation for each criteria may take up to 30 seconds.")
         st.divider()
