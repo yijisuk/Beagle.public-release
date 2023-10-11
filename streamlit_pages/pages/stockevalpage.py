@@ -28,6 +28,7 @@ class StockEvalPage(BasePage):
 
         self.user_input = st.selectbox(
             label="Select a company to analyze:",
+            index=None,
             options=self.datasetloader.company_list
         )
 
