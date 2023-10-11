@@ -66,6 +66,7 @@ class StockEvalPage(BasePage):
 
                     elif validation_result["result"] is False:
                         st.write("Please enter a valid ticker. Refer to the supported tickers above.")
+                        st.write("If you have entered a valid ticker, but the error message is displayed, try again after refreshing the page.")
 
                 elif self.user_input == "":
                     st.write("Please enter a ticker.")
@@ -83,5 +84,5 @@ class StockEvalPage(BasePage):
         st.header("Evaluate company financials, price technicals, and analysts' forecasts 💡")
         st.write("Enter a ticker to get started.")
         st.write("The search engine is a demo deployment, and is currently limited to the following tickers:")
-        st.write(" | ".join(self.datasetloader.tickers))
+        st.json(self.datasetloader.company_dict, expanded=False)
         st.divider()
