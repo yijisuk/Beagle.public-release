@@ -10,13 +10,13 @@ The process begins with a comprehensive assessment of a company's financial stat
 
 The organized evaluation scores are integrated with the GPT-4 Large Language Model (LLM), providing a comprehensive evaluation.
 
-### 2️⃣ Market screener, analysis & comprehension
+### 2️⃣ Market screener
 
 Investment success depends on both identifying companies with solid financials and gauging the optimal market entry time. 
 
 The TradingView widget is incorporated to display a live daily market heatmap, showcasing the most recent market changes.
   
-### 3️⃣ Economy overview & evaluation
+### 3️⃣ Economy overview
 
 Understanding the broader economic landscape is vital, as economic conditions significantly dictate the flow of money. Insights are primarily derived from [JPMorgan Asset Management](https://am.jpmorgan.com/us/en/asset-management/adv/insights/market-insights/market-updates/economic-update/)'s weekly reports, providing a succinct weekly summary of economic evaluations. 
 
