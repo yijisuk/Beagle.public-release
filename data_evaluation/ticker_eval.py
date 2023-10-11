@@ -136,7 +136,7 @@ class TickerEvaluator:
     def technicals_evaluation(self):
 
         ### TODO: Update Technicals Evaluation
-        st.header("Technicals Evaluation")
+        st.header("Technical Evaluation")
 
         # technicals_formatter = TechnicalsEvaluationFormatter(
         #     self.ticker, self.data[kv.TECHNICALS_EVAL.value])
@@ -160,17 +160,17 @@ class TickerEvaluator:
 
         with col1:
             marketwatch_url = f"https://www.marketwatch.com/investing/stock/{self.ticker.lower()}/analystestimates"
-            st.subheader(f"[MarketWatch]({marketwatch_url})")
+            st.link_button("MarketWatch", marketwatch_url)
             st.write(f"Detailed analyst estimate statistics on {self.ticker}, including price targets and recommendations.")
 
         with col2:
             tipranks_url = f"https://www.tipranks.com/stocks/{self.ticker.lower()}/forecast"
-            st.subheader(f"[TipRanks]({tipranks_url})")
+            st.link_button("TipRanks", tipranks_url)
             st.write(f"Comprehensive analysis on {self.ticker}, including analyst estimates, company financials, and market sentiment.")
 
         with col3:
             alphaspread_url = f"https://www.alphaspread.com/security/{self.exchange.lower()}/{self.ticker.lower()}/summary"
-            st.subheader(f"[AlphaSpread]({alphaspread_url})")
+            st.link_button("AlphaSpread", alphaspread_url)
             st.write(f"Intrinsic value, fundamental analysis, and competitor analysis on {self.ticker}.")
 
         

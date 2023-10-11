@@ -13,7 +13,7 @@ class DatasetLoader():
         self.tickers = self.ticker_data["ticker"].tolist()
         self.company_names = self.ticker_data["company_name"].tolist()
 
-        self.company_dict = dict(zip(self.tickers, self.company_names))
+        self.company_list = [f"{ticker}: {company_name}" for ticker, company_name in zip(self.tickers, self.company_names)]
 
 
     def load_organized_ticker_data(self):
