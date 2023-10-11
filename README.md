@@ -25,11 +25,11 @@ Additionally, TradingView widgets for the economic calendar and forex heatmap ar
 ## Accessing the Demo
 ### 🌐 Public Web App
 
-Easy access can be done through accessing the [public web app](), powered by [Streamlit](https://streamlit.io/). 
+Easy access can be done through accessing the [public web app](https://beagle.streamlit.app/), powered by [Streamlit](https://streamlit.io/). 
 
 You can also access it by scanning the QR code below 👇
 
-<img src="" alt="QR" width="250" height="250"/>
+<img src="https://github.com/yijisuk/Beagle.public-release/assets/63234184/67f11983-b4e7-4284-ac5b-b8dde2d0fe6d" alt="QR" width="250" height="250"/>
 
 ### 🖥️ Run the repo locally
 1. Clone the repository: ```https://github.com/yijisuk/Beagle.public-release.git```
