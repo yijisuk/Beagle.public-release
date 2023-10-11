@@ -13,7 +13,7 @@ def market_news_timeline(height=750):
         {{
         "feedMode": "market",
         "market": "stock",
-        "colorTheme": "dark",
+        "colorTheme": "{st.get_option("theme.base").lower()}",
         "isTransparent": true,
         "displayMode": "regular",
         "width": "100%",

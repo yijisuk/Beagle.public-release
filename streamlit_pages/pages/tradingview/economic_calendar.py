@@ -15,7 +15,7 @@ def economic_calendar(height=800):
         {{
         "width": "100%",
         "height": "{height}",
-        "colorTheme": "dark",
+        "colorTheme": "{st.get_option("theme.base").lower()}",
         "isTransparent": true,
         "locale": "en",
         "importanceFilter": "0,1",

@@ -1,9 +1,10 @@
+import streamlit as st
 import streamlit.components.v1 as components
 
 
 class CompanyInfo:
 
-    def __init__(self, exchange, ticker):
+    def __init__(self, exchange, ticker, theme):
 
         self.exchange = exchange
         self.ticker = ticker
@@ -31,7 +32,7 @@ class CompanyInfo:
             "width": "100%",
             "height": "{height}",
             "locale": "en",
-            "colorTheme": "dark",
+            "colorTheme": "{st.get_option("theme.base").lower()}",
             "autosize": true,
             "showVolume": true,
             "showMA": true,
