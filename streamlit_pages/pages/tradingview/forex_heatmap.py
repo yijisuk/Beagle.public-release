@@ -26,7 +26,7 @@ def forex_heatmap(height=500):
             "KRW"
         ],
         "isTransparent": true,
-        "colorTheme": "dark",
+        "colorTheme": "{st.get_option("theme.base").lower()}",
         "locale": "en"
         }}
         </script>

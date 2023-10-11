@@ -1,3 +1,4 @@
+import streamlit as st
 import streamlit.components.v1 as components
 
 
@@ -17,7 +18,7 @@ def heatmap(height=750):
         "blockColor": "change",
         "locale": "en",
         "symbolUrl": "",
-        "colorTheme": "dark",
+        "colorTheme": "{st.get_option("theme.base").lower()}",
         "hasTopBar": true,
         "isDataSetEnabled": true,
         "isZoomEnabled": true,
