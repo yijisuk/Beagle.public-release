@@ -32,7 +32,7 @@ You can also access it by scanning the QR code below 👇
 <img src="https://github.com/yijisuk/Beagle.public-release/assets/63234184/67f11983-b4e7-4284-ac5b-b8dde2d0fe6d" alt="QR" width="250" height="250"/>
 
 ### 🖥️ Run the repo locally
-1. Clone the repository: ```https://github.com/yijisuk/Beagle.public-release.git```
+1. Clone the repository: ```git clone https://github.com/yijisuk/Beagle.public-release.git```
 2. Create an Anaconda virtual environment and activate it: <br>```conda create --name beagle python=3.10``` <br>```conda activate beagle```
 3. Install the dependencies: ```pip install -r requirements.txt```
 4. Create a file ```secrets.toml``` inside the folder ```.streamlit```. The path should be: ```./streamlit/secrets.toml```
