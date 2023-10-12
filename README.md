@@ -1,4 +1,4 @@
-# 🐶 Beagle
+# Beagle 🐶
 Beagle provides tailored market data analysis to simplify market entry for individual investors.
 
 ## Our Solutions
