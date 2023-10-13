@@ -1,6 +1,10 @@
 # Beagle 🐶
 Beagle provides tailored market data analysis to simplify market entry for individual investors.
 
+<img src="https://github.com/yijisuk/Beagle.public-release/assets/63234184/ae6bfc48-08be-4736-aba9-d062b589d225" alt="Demo" width="100%">
+
+Watch our presentation [here.](https://youtu.be/O3Ava2ebgaU)
+
 ## Our Solutions
 ### 1️⃣ Company financials analysis & evaluation
 
@@ -39,3 +43,8 @@ You can also access it by scanning the QR code below 👇
 5. Visit the [OpenAI API Platform](https://platform.openai.com/) and create an API key.
 6. Save the created API key in ```secrets.toml```. Should follow the given format: ```openai_api_key = "OPENAI-API-KEY"```
 7. Open a new terminal window in the project directory ```./Beagle.public-release```, then run the Streamlit command to run the web app: ```streamlit run main.py```
+
+## File Descriptions
+The dataset used for this application can be accessed on ```./data_storage```.
+- ```ticker_data_sample.csv```: Holds the quantitative evaluation data of companies, processed by our internal algorithm.
+- ```economy_evaluation.csv```: Holds the literary data on economic climate evaluation.
