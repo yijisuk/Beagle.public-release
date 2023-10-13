@@ -1,7 +1,7 @@
 # Beagle 🐶
 Beagle provides tailored market data analysis to simplify market entry for individual investors.
 
-<img src="https://github.com/yijisuk/Beagle.public-release/assets/63234184/ae6bfc48-08be-4736-aba9-d062b589d225" alt="Demo" width="100%">
+<img src="https://github.com/yijisuk/Beagle.public-release/assets/63234184/1c2a49be-12a1-4290-9fb8-26636820390c" alt="Demo" width="100%">
 
 Watch our presentation [here.](https://youtu.be/O3Ava2ebgaU)
 
@@ -33,7 +33,7 @@ Easy access can be done through accessing the [public web app](https://beagle.st
 
 You can also access it by scanning the QR code below 👇
 
-<img src="https://github.com/yijisuk/Beagle.public-release/assets/63234184/67f11983-b4e7-4284-ac5b-b8dde2d0fe6d" alt="QR" width="250" height="250"/>
+<img src="https://github.com/yijisuk/Beagle.public-release/assets/63234184/afcc771c-06d4-4c8a-8ec8-9e4afb4f4b6f" alt="QR" width="250" height="250"/>
 
 ### 🖥️ Run the repo locally
 1. Clone the repository: ```git clone https://github.com/yijisuk/Beagle.public-release.git```
